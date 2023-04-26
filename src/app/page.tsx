@@ -1,7 +1,7 @@
-export default function Home() {
+export default function Login() {
   return (
-    <main style={{ backgroundColor: 'red', height: '100vh' }}>
-      <h1>Home</h1>
+    <main style={{ backgroundColor: 'black', height: '100vh' }}>
+      <h1 style={{ color: 'cyan' }}>Login</h1>
     </main>
   );
 }
