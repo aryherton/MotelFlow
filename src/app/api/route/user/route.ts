@@ -9,12 +9,10 @@ export async function GET(request: Request) {
 
   if (idParams) {
     const user = await userService.getUserById(idParams);
-    console.log('>>>>>>>>>>>>>>>>>>>>>>>>>', user);
 
     if (user) return NextResponse.json(user);
   } else {
     const users = await userService.getAllUser();
-    console.log('???????????????', users);
 
     if (users) return NextResponse.json(users);
   }

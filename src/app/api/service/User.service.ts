@@ -14,7 +14,7 @@ export class UserService {
 
   public async getUserById(id: string): Promise<IUser> {
     const user = await RequestMongo.findOne('user', { _id: id });
-    console.log('::::::::::::::::::::::::::::::::', user);
+
     return user as IUser;
   }
 

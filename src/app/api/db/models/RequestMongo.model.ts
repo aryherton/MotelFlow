@@ -34,14 +34,8 @@ class RequestMongo implements IClasseRequestMongo {
         .then((db) => {
           db.collection(collection)
             .findOne(newKey)
-            .then((result) => {
-              console.log('Test FindOne Result', result);
-              resolve(result);
-            })
-            .catch((err) => {
-              console.log('Test FindOne Error', err);
-              reject(err);
-            });
+            .then((result) => resolve(result))
+            .catch((err) => reject(err));
         })
         .catch((err) => console.log(err));
     });
